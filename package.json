@@ -1,0 +1,14 @@
+{
+  "name": "@palto/temppera",
+  "version": "0.1.0",
+  "description": "Temppera is an sdk to use a connect to certain HR software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
