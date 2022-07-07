@@ -1,6 +1,10 @@
-import fetch from 'node-fetch';
+type fetchType = typeof fetch
 
-export async function getData(url: string): Promise<string> {
-    const response = await fetch(url)
-    return response.text()
+export class TempperaSDK {
+    constructor(readonly baseUrl: string, private fetch: fetchType) {
+    }
+    async getData(): Promise<string> {
+        const response = await this.fetch(this.baseUrl)
+        return response.text()
+    }
 }
