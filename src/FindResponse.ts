@@ -1,12 +1,12 @@
 import { APIResponse } from './APIResponse.js';
 
-export interface FindResponse extends APIResponse {
+export interface FindResponse<R> extends APIResponse {
   numrows: number,
   rowchk: number,
-  rows: any[]
+  rows: R[]
 }
 
-export interface FindJobRow {
+export interface FindProjectRow {
   Id: string
   JobNo_: string
   JobName: string
