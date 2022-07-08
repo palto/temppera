@@ -1,10 +1,20 @@
-type fetchType = typeof fetch
+import axios from 'axios';
 
 export class TempperaSDK {
-    constructor(readonly baseUrl: string, private fetch: fetchType) {
+    private axios: axios.AxiosInstance
+    constructor(options: SDKOptions) {
+        this.axios = axios.default.create({
+            baseURL: options.baseUrl
+        })
     }
     async getData(): Promise<string> {
-        const response = await this.fetch(this.baseUrl)
-        return response.text()
+        const response = await this.axios.get<string>("/");
+        return response.data
     }
+}
+
+export interface SDKOptions {
+    baseUrl: string
+    username: string
+    password: string
 }
