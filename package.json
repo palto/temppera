@@ -1,18 +1,28 @@
 {
-  "name": "@palto/temppera",
+  "name": "@palto/temppera-sdk",
   "version": "0.1.0",
   "description": "Temppera is an sdk to use a connect to certain HR software",
   "main": "index.js",
+  "types": "index.d.ts",
   "type": "module",
   "scripts": {
     "lint": "eslint .",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "prestart": "npm run build",
-    "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/list-projects.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepack": "npm run build"
+
   },
-  "author": "",
+  "author": "palto",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palto/temppera.git"
+  },
+  "files": [
+    "dist"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.0.3",

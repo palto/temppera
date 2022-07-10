@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { TempperaSDK } from './src/sdk.js';
+import { TempperaSDK } from './TempperaSDK.js';
 const baseUrl = process.env.API_URL;
 if(!baseUrl) {
   throw new Error("you need to set API_URL environment variable")
