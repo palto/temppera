@@ -13,7 +13,6 @@
     "start": "node dist/list-projects.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepack": "npm run build"
-
   },
   "author": "palto",
   "repository": {
@@ -36,7 +35,6 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "dotenv": "^16.0.1",
     "tough-cookie": "^4.0.0"
   }
 }
